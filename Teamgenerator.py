@@ -234,7 +234,9 @@ class TeamGenerator:
         if {"alejandro", "chocosexy", "coco"}.issubset(team_set):
             sounds.append("lasprimas.wav")
         if {"gianca", "david", "kevin"}.issubset(team_set):
-            sounds.append("teamvalorant.wav")    
+            sounds.append("teamvalorant.wav")   
+        if {"david", "kevin"}.issubset(team_set):
+            sounds.append("venezolanoycolombiano.wav")       
         return sounds
     def play_sequential_special_sounds(self, sounds, index=0, callback=None):
         if index >= len(sounds):
