@@ -23,7 +23,7 @@ class TeamGenerator:
         master.grid_rowconfigure(0, weight=1)
         master.grid_rowconfigure(1, weight=0)
         master.grid_rowconfigure(2, weight=0)
-        self.all_players = ["Alejandro", "Coco","Chocosexy", "David", "Gianca", "Guachiman", "Katamakiavelico", "Kevin", "lobothunder", "Mauricio", "Motaro", "Shayam", "Silversurfer", "Sticks", "Tenshi", "JeanPaul", "Jktortuga", "Yair"]
+        self.all_players = ["Alejandro","Master", "Chepo","Chocosexy", "David", "Gianca", "Guachiman", "Katamakiavelico", "Kevin", "lobothunder", "Mauricio", "Motaro", "Shayam", "Silversurfer", "Sticks", "Tenshi", "JeanPaul", "Jktortuga", "Yair"]
         self.selected_players = []
         self.last_team = []
         self.overflow = []
@@ -231,12 +231,14 @@ class TeamGenerator:
             sounds.append("duomediocreynovia.wav")
         if {"sticks", "david"}.issubset(team_set) and "silversurfer" not in team_set:
             sounds.append("duomediocre.wav")
-        if {"alejandro", "chocosexy", "coco"}.issubset(team_set):
+        if {"alejandro", "chocosexy", "chepo"}.issubset(team_set):
             sounds.append("lasprimas.wav")
         if {"gianca", "david", "kevin"}.issubset(team_set):
             sounds.append("teamvalorant.wav")   
         if {"david", "kevin"}.issubset(team_set):
             sounds.append("venezolanoycolombiano.wav")       
+        if {"alejandro", "katamakiavelico"}.issubset(team_set):
+            sounds.append("comoquedolamoto.wav")       
         return sounds
     def play_sequential_special_sounds(self, sounds, index=0, callback=None):
         if index >= len(sounds):
