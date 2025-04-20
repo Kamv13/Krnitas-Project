@@ -255,7 +255,7 @@ class TeamGenerator:
                     print(f"Error playing special sound {sound}: {e}")
             else:
                 print(f"Sound file {sound_file} not found.")
-        self.master.after(1800, lambda: self.play_sequential_special_sounds(sounds, index+1, callback))
+        self.master.after(2000, lambda: self.play_sequential_special_sounds(sounds, index+1, callback))
     def update_overflow(self):
         for widget in self.overflow_buttons_frame.winfo_children():
             widget.destroy()
@@ -321,7 +321,7 @@ class TeamGenerator:
             self.reveal_overflow_player(ref, slot_info)
         else:
             self.reveal_team_player(slot_type, ref)
-        self.master.after(1500, lambda: self.reveal_next_slot(index+1, all_slots))
+        self.master.after(1800, lambda: self.reveal_next_slot(index+1, all_slots))
 
 if __name__ == "__main__":
     root = tk.Tk()
